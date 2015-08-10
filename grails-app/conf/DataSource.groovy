@@ -1,9 +1,8 @@
 dataSource {
     pooled = true
     jmxExport = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
+    driverClassName = "org.postgresql.Driver"
+
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -31,7 +30,8 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+			dialect = "org.hibernate.dialect.PostgreSQLDialect"
+            url = "postgres://jhnhbfotqtitcx:p5UAy9TzeWqtvwyZQYjkmu_VCs@ec2-54-204-0-120.compute-1.amazonaws.com:5432/d6fs3th2g5g8tv"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
