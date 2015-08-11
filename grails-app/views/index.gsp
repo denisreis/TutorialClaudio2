@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>19:53 - 10/08/2015</title>
+		<title>19:03 - 11/08/2015</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -105,11 +105,12 @@
 		<div id="page-body" role="main">
 			<h1>Tutorial 02</h1>
 			<p>
-				Página criada em 11/08/15 com o objetivo de aprendizagem do framework Grails, linguem groovy,
+				      Página criada em 11/08/15 com o objetivo de aprendizagem do framework Grails, linguem groovy,
 				padrão de projeto MVC e outros conceitos relacionados.				  
 			</p>
+			<br>
 			<p>
-				De acordo com o padrão MVC não deve haver controle nas visões, porém isso pode ser feito através
+				      De acordo com o padrão MVC não deve haver controle nas visões, porém isso pode ser feito através
 				do uso de scriptlets. Vamos a alguns exemplos:
 			</p>
 			<%
@@ -117,6 +118,16 @@
 				def data = new Date()
 			 %>
 			<h2> Data e hora atual = <%= data %></h2>
+			<p>
+				   Mas como o uso de scriptlet gera alguma polemica por misturar o controle nas visões vamos criar um controlador
+				chamado ExScriptlet que chamara uma ou mais visoes com outros exemplos de scriptlet. <br>
+				<br>
+				   Quando eu crio o controlador o Grails automaticamente cria uma pasta de mesmo nome em "views". Ja na classe do 
+				controlador o grails cria " def index() { }", isso significa que inicialmente o grails vai procurar pelo index do
+				controlador na pasta "views" quando o controlador for chamado.<br>
+				     Vamos então criar a Groovy Server Page (gsp) dentro da view do controlador que acabamos de fazer. A index.gsp
+				     por enquanto só terá um título com a sua data de criacao.
+			</p>
 			
 
 			<div id="controller-list" role="navigation">
