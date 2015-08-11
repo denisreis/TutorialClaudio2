@@ -103,7 +103,20 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Teste 01</h1>
+			<h1>Tutorial 02</h1>
+			<p>
+				Página criada em 11/08/15 com o objetivo de aprendizagem do framework Grails, linguem groovy,
+				padrão de projeto MVC e outros conceitos relacionados.				  
+			</p>
+			<p>
+				De acordo com o padrão MVC não deve haver controle nas visões, porém isso pode ser feito através
+				do uso de scriptlets. Vamos a alguns exemplos:
+			</p>
+			<%
+				//Declarando a variavel
+				def data = new Date()
+			 %>
+			<h2> Data e hora atual = <%= data %></h2>
 			
 
 			<div id="controller-list" role="navigation">
