@@ -119,7 +119,7 @@
 			 %>
 			<h2> Data e hora atual = <%= data %></h2>
 			<p>
-				   Mas como o uso de scriptlet gera alguma polemica por misturar o controle nas visões vamos criar um controlador
+				   Mas como o uso de scriptlet gera alguma polemica por misturar o controle nas visões, vamos criar um controlador
 				chamado ExScriptlet que chamara uma ou mais visoes com outros exemplos de scriptlet. <br>
 				<br>
 				   Quando eu crio o controlador o Grails automaticamente cria uma pasta de mesmo nome em "views". Ja na classe do 
@@ -127,6 +127,15 @@
 				controlador na pasta "views" quando o controlador for chamado.<br>
 				     Vamos então criar a Groovy Server Page (gsp) dentro da view do controlador que acabamos de fazer. A index.gsp
 				     por enquanto só terá um título com a sua data de criacao.
+				     <br>
+				     <br>
+				     Para chamar o controlador basta digitar no navegador o endereco do site seguido de /Controlador, no nosso caso 
+				  /ExScriptlet. 
+			</p>
+			<p>
+				Vamos agora criar uma segunda visao para exemplos de scriptlet que sera chamada do mesmo controlador em uma 
+				segunda "def".<br>
+				Agora podemos chamar o segundo controlador com /ex2Scriptlet.
 			</p>
 			
 
