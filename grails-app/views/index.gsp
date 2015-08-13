@@ -151,7 +151,7 @@
 			<p>
 				Mas voltando as visões, a partir deste ponto vou colocar os outros exemplos no arquivo "index.gsp". 
 				Para ir para essa nossa segunda página, clique no link a seguir:
-				<a href="/TutorialClaudio2/ExScriptlet">LINK</a>. <br>
+				<a href="ExScriptlet">LINK</a>. <br>
 				<br>
 				Note no codigo fonte, que no link acima eu usei o nome da minha app, uma "/" e o nome do 
 				controlador. So pra exemplificar eu criarei abaixo um segundo link que aponta para a segunda
