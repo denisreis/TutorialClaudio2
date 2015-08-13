@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>09:36 - 13/08/2015</title>
+		<title>09:45 - 13/08/2015</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -104,11 +104,12 @@
 		</div>
 		<div id="page-body" role="main">
 			<h1>Tutorial 02</h1>
+			
 			<p>
 				      Página criada em 11/08/15 com o objetivo de aprendizagem do framework Grails, linguem groovy,
 				padrão de projeto MVC e outros conceitos relacionados.				  
 			</p>
-			<br>
+			<h1>Assunto inicial = VISÕES</h1>
 			<p>
 				      De acordo com o padrão MVC não deve haver controle nas visões, porém isso pode ser feito através
 				do uso de scriptlets. Vamos a alguns exemplos:
@@ -117,25 +118,46 @@
 				//Declarando a variavel
 				def data = new Date()
 			 %>
-			<h2> Data e hora atual = <%= data %></h2>
+			<h2> Ex1: Data e hora atual = <%= data %></h2>
+			<h2> Ex2: Data e hora atraves de uma expressao groovy (sem scriptlet) = ${data}</h2>
+			<h2> Ex3: Loops nas visões. Implementado na nossa segunda página de exemplos, conforme explicação será abaixo.</h2>
+			<br>
 			<p>
-				   Mas como o uso de scriptlet gera alguma polemica por misturar o controle nas visões, vamos criar um controlador
-				chamado ExScriptlet que chamara uma ou mais visoes com outros exemplos de scriptlet. <br>
+				   Conforme já comentado, o uso de scriptlet gera alguma polemica por misturar 
+				   o controle nas visões. Vamos então criar um controlador chamado ExScriptlet que chamará
+				   uma ou mais visoes com outros exemplos de scriptlet. <br>
 				<br>
-				   Quando eu crio o controlador o Grails automaticamente cria uma pasta de mesmo nome em "views". Ja na classe do 
-				controlador o grails cria " def index() { }", isso significa que inicialmente o grails vai procurar pelo index do
-				controlador na pasta "views" quando o controlador for chamado.<br>
-				     Vamos então criar a Groovy Server Page (gsp) dentro da view do controlador que acabamos de fazer. A index.gsp
-				     por enquanto só terá um título com a sua data de criacao.
+				   Quando eu crio o controlador o Grails automaticamente cria uma pasta de mesmo nome em "views". Ja na
+				   classe do controlador o grails cria "def index() { }" (ação), isso significa que inicialmente o grails
+				   vai procurar pelo index do controlador na pasta "views" quando o controlador for chamado. <br>
+				   Está a ação padrão do controlador.<br>
+				     Vamos então criar a Groovy Server Page (gsp) dentro da view do controlador que acabamos de fazer, 
+				     A "index.gsp".				     
 				     <br>
 				     <br>
-				     Para chamar o controlador basta digitar no navegador o endereco do site seguido de /Controlador, no nosso caso 
-				  /ExScriptlet. 
+				     Para chamar o controlador basta digitar no navegador o endereco do site seguido de /Controlador, 
+				     no nosso caso /ExScriptlet. 
 			</p>
 			<p>
 				Vamos agora criar uma segunda visao para exemplos de scriptlet que sera chamada do mesmo controlador em uma 
-				segunda "def".<br>
-				Agora podemos chamar o segundo controlador com /ex2Scriptlet.
+				segunda "def" (ação).<br>
+				Agora podemos chamar o segundo controlador com /ex2Scriptlet, correto? Nao!<br>
+				Podemos usar /ExScriptlet direto pq a ação que esta sendo chamada é o index, no caso de outras, temos 
+				que especificar o seu nome depois de outra "/", no nosso exemplo ficará "/ExScriptlet/Ex2Scriptlet".
+				Perceba que temos agora um controlador chamado ExScriptlet com duas ações definidas, a pradão (index)
+				e uma segunda chamada ex2Scriptlet. Poderíamos criar ainda outras ações de acordo com a necessidade.
+			</p>
+			<br>			
+			<p>
+				Mas voltando as visões, a partir deste ponto vou colocar os outros exemplos no arquivo "index.gsp". 
+				Para ir para essa nossa segunda página, clique no link a seguir:
+				<a href="/TutorialClaudio2/ExScriptlet">LINK</a>. <br>
+				<br>
+				Note no codigo fonte, que no link acima eu usei o nome da minha app, uma "/" e o nome do 
+				controlador. So pra exemplificar eu criarei abaixo um segundo link que aponta para a segunda
+				ação do mesmo controlador. Veja que nesse segundo link eu coloquei 
+				"/nome da app/controlador/acao". 
+				<a href="/TutorialClaudio2/ExScriptlet/Ex2Scriptlet">LINK2</a>.
 			</p>
 			
 
