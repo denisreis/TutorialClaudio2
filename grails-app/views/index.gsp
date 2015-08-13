@@ -142,22 +142,22 @@
 				Vamos agora criar uma segunda visao para exemplos de scriptlet que sera chamada do mesmo controlador em uma 
 				segunda "def" (ação).<br>
 				Agora podemos chamar o segundo controlador com /ex2Scriptlet, correto? Nao!<br>
-				Podemos usar /ExScriptlet direto pq a ação que esta sendo chamada é o index, no caso de outras, temos 
-				que especificar o seu nome depois de outra "/", no nosso exemplo ficará "/ExScriptlet/Ex2Scriptlet".
+				Podemos usar "ExScriptlet" direto pq a ação que esta sendo chamada é o index, no caso de outras, temos 
+				que especificar o seu nome depois de outra "/", no nosso exemplo ficará "ExScriptlet/Ex2Scriptlet".
 				Perceba que temos agora um controlador chamado ExScriptlet com duas ações definidas, a pradão (index)
 				e uma segunda chamada ex2Scriptlet. Poderíamos criar ainda outras ações de acordo com a necessidade.
 			</p>
 			<br>			
 			<p>
-				Mas voltando as visões, a partir deste ponto vou colocar os outros exemplos no arquivo "index.gsp". 
+				Mas voltando às visões, a partir deste ponto vou colocar os outros exemplos no arquivo "index.gsp". 
 				Para ir para essa nossa segunda página, clique no link a seguir:
 				<a href="ExScriptlet">LINK</a>. <br>
 				<br>
-				Note no codigo fonte, que no link acima eu usei o nome da minha app, uma "/" e o nome do 
-				controlador. So pra exemplificar eu criarei abaixo um segundo link que aponta para a segunda
-				ação do mesmo controlador. Veja que nesse segundo link eu coloquei 
+				Note, no codigo fonte, que no link acima eu usei o nome do controlador. 
+				So pra exemplificar eu criarei abaixo um segundo link que aponta para a segunda
+				ação do mesmo controlador. Note que nesse segundo link eu coloquei 
 				"/nome da app/controlador/acao". 
-				<a href="/TutorialClaudio2/ExScriptlet/Ex2Scriptlet">LINK2</a>.
+				<a href="ExScriptlet/Ex2Scriptlet">LINK2</a>.
 			</p>
 			
 
