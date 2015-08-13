@@ -20,5 +20,7 @@
  <%
 	}
  %>
+ <h2>Ex4: Loop com condiçõe.</h2>
+ Agora só vai listar
 
 </html>
